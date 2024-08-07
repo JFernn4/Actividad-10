@@ -18,18 +18,35 @@ namespace Actividad_10
         }
         public static void AddComputer(List<Product> productList)
         {
-            Console.WriteLine("Ingresa el nombre del producto.");
-            string name= Console.ReadLine();
-            Console.WriteLine("Ingresa el precio del producto.");
-            double price= Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Ingresa el procesador del producto.");
-            string processor= Console.ReadLine();
-            Console.WriteLine("Ingresa el GPU del producto.");
-            string gPU= Console.ReadLine();
-            Computer computer= new Computer(name, price, processor, gPU);
-            productList.Add(computer);
-            Console.WriteLine("El producto se ha registrado.");
-            Console.ReadKey();
+            string name = "empty";
+            double price = 0;
+            bool trycatch = true;
+            while (trycatch)
+            {
+                try
+                {
+                    if (name == "empty")
+                    {
+                        Console.WriteLine("Ingresa el nombre del producto.");
+                        name = Console.ReadLine();
+                    }
+                    if (price == 0)
+                    {
+                        Console.WriteLine("Ingresa el precio del producto.");
+                        price = Convert.ToDouble(Console.ReadLine());
+                    }
+                    Console.WriteLine("Ingresa el procesador del producto.");
+                    string processor = Console.ReadLine();
+                    Console.WriteLine("Ingresa el GPU del producto.");
+                    string gPU = Console.ReadLine();
+                    Computer computer = new Computer(name, price, processor, gPU);
+                    productList.Add(computer);
+                    Console.WriteLine("El producto se ha registrado.");
+                    trycatch = false;
+                    Console.ReadKey();
+                }
+                catch (Exception ex) { Console.Clear(); Console.WriteLine("Debe ingresar números. "+ex.Message); }
+            }
         }
     }
 }

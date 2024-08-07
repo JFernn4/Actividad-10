@@ -18,18 +18,35 @@ namespace Actividad_10
         }
         public static void AddPhone(List<Product> productList)
         {
-            Console.WriteLine("Ingresa el nombre del producto.");
-            string name= Console.ReadLine();
-            Console.WriteLine("Ingresa el precio del producto.");
-            double price= double.Parse(Console.ReadLine());
-            Console.WriteLine("Ingresa el tipo de pantalla del producto.");
-            string screen= Console.ReadLine();
-            Console.WriteLine("Ingresa el tipo de conectividad del producto.");
-            string connectivity= Console.ReadLine();
-            Phone phone= new Phone (name,price,screen,connectivity);//añade un telefono a la lista de productos
-            productList.Add(phone);
-            Console.WriteLine("El producto se ha registrado.");
-            Console.ReadKey();
+            string name = "empty";
+            double price = 0;
+            bool trycatch = true;
+            while (trycatch)
+            {
+                try
+                {
+                    if (name == "empty")
+                    {
+                        Console.WriteLine("Ingresa el nombre del producto.");
+                        name = Console.ReadLine();
+                    }
+                    if (price == 0)
+                    {
+                        Console.WriteLine("Ingresa el precio del producto.");
+                        price = double.Parse(Console.ReadLine());
+                    }
+                    Console.WriteLine("Ingresa el tipo de pantalla del producto.");
+                    string screen = Console.ReadLine();
+                    Console.WriteLine("Ingresa el tipo de conectividad del producto.");
+                    string connectivity = Console.ReadLine();
+                    Phone phone = new Phone(name, price, screen, connectivity);//añade un telefono a la lista de productos
+                    productList.Add(phone);
+                    Console.WriteLine("El producto se ha registrado.");
+                    trycatch = false;
+                    Console.ReadKey();
+                }
+                catch (Exception ex) { Console.Clear();  Console.WriteLine("Debe ingresar números. "+ex.Message);}
+            }
         }
     }
 }

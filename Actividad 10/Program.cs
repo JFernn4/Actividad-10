@@ -57,7 +57,7 @@ while (menu)
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("Ingresa un número del 1 al 4" +ex.Message);
+                        Console.WriteLine("Ingresa un número del 1 al 4. " +ex.Message);
                         Console.ReadKey();
                     }
                 }
@@ -84,7 +84,7 @@ while (menu)
     }
     catch (Exception ex)
     {
-        Console.WriteLine("Ingresa un número del 1 al 4"+ex.Message);
+        Console.WriteLine("Ingresa un número del 1 al 4. "+ex.Message);
         Console.ReadKey();
     }
 }

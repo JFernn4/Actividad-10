@@ -62,6 +62,7 @@ namespace Actividad_10
             else
             {
                 Console.WriteLine("No se ha encontrado el producto.");
+                Console.ReadKey();
             }
         }
     }

@@ -8,10 +8,13 @@ namespace Actividad_10
 {
     public class Product
     {
-        public int Id { get; set; }
-        public string Brand { get; set; }
-        public string Model { get; set; }
-        public int Price { get; set; }
-        public int Stock { get; set; } 
+        public string Name { get; set; }
+        public double Price { get; set; }
+
+        public Product(string name, double price)
+        {
+            Name = name;
+            Price = price;
+        }
     }
 }

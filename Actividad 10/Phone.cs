@@ -6,11 +6,15 @@ using System.Threading.Tasks;
 
 namespace Actividad_10
 {
-    internal class Phone : Product
+    public class Phone : Product
     {
-        public string Camera { get; set; }
-        public int Battery { get; set; }
         public string Screen {  get; set; }
         public string Connectivity { get; set; }
+
+        public Phone(string name, double price, string screen, string connectivity) : base(name,price)//llamar constructor de "Product"
+        {
+            Screen = screen;
+            Connectivity = connectivity;
+        }
     }
 }

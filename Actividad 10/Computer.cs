@@ -10,8 +10,10 @@ namespace Actividad_10
     {
         public string Processor { get; set; }
         public double GPU { get; set; }
-        public int Battery { get; set; }
-        public string Screen {  get; set; }
-        public string Connectivity { get; set; }
+       public Computer(string name, double price, string processor, double gPU):base (name,price)
+        {
+            Processor = processor;
+            GPU = gPU;
+        }
     }
 }

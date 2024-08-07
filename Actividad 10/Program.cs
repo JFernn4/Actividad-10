@@ -52,6 +52,12 @@ while (menu)
                 }
             }
             break;
+        case 2:
+            {
+                Console.Clear();
+                Product.ShowAllProducts(productList);
+                break;
+            }
         case 4:
             {
                 Console.Clear ();

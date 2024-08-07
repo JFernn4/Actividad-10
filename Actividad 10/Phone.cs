@@ -28,6 +28,8 @@ namespace Actividad_10
             string connectivity= Console.ReadLine();
             Phone phone= new Phone (name,price,screen,connectivity);//añade un telefono a la lista de productos
             productList.Add(phone);
+            Console.WriteLine("El producto se ha registrado.");
+            Console.ReadKey();
         }
     }
 }

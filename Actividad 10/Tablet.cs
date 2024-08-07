@@ -28,6 +28,8 @@ namespace Actividad_10
             string connectivity= Console.ReadLine();
             Tablet tablet= new Tablet (name, price, screen, connectivity);
             productList.Add(tablet);
+            Console.WriteLine("El producto se ha registrado.");
+            Console.ReadKey();
         }
     }
 }

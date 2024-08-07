@@ -58,6 +58,12 @@ while (menu)
                 Product.ShowAllProducts(productList);
                 break;
             }
+        case 3:
+            {
+                Console.Clear();
+                Product.SearchProduct(productList);
+                break;
+            }
         case 4:
             {
                 Console.Clear ();

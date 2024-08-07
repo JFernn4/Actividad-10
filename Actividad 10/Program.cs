@@ -1,5 +1,8 @@
-﻿bool menu= true;
+﻿using Actividad_10;
+
+bool menu= true;
 int option;
+List<Product> productList= new List<Product>(); //lista de tipo productos
 while (menu)
 {
     Console.Clear();
@@ -9,6 +12,12 @@ while (menu)
     {
         case 0:
             break;
+        case 4:
+            {
+                Console.Clear ();
+                menu = false;
+                break;
+            }
     }
 }
 static void ShowMenu()

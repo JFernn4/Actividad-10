@@ -16,5 +16,18 @@ namespace Actividad_10
             Screen = screen;
             Connectivity = connectivity;
         }
+        public static void AddPhone(List<Product> productList)
+        {
+            Console.WriteLine("Ingresa el nombre del producto.");
+            string name= Console.ReadLine();
+            Console.WriteLine("Ingresa el precio del producto.");
+            double price= double.Parse(Console.ReadLine());
+            Console.WriteLine("Ingresa el tipo de pantalla del producto.");
+            string screen= Console.ReadLine();
+            Console.WriteLine("Ingresa el tipo de conectividad del producto.");
+            string connectivity= Console.ReadLine();
+            Phone phone= new Phone (name,price,screen,connectivity);//añade un telefono a la lista de productos
+            productList.Add(phone);
+        }
     }
 }

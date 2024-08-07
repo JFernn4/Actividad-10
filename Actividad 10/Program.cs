@@ -71,7 +71,15 @@ while (menu)
             case 3:
                 {
                     Console.Clear();
-                    Product.SearchProduct(productList);
+                    if (productList.Count != 0)
+                    {
+                        Product.SearchProduct(productList);
+                    }
+                    else
+                    {
+                        Console.WriteLine("La lista de productos está vacía.");
+                        Console.ReadKey();
+                    }
                     break;
                 }
             case 4:
